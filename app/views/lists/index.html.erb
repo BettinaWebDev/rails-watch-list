@@ -1,11 +1,14 @@
-<h1>All lists</h1>
+<div class="container py-2 my-10">
+  <h1>All watchlists created</h1>
+  <p>Pick one to see the bookmarks</p>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li>
-      <%= link_to list.name, list_path(list) %><br>
-    </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %><br>
+      </li>
+    <% end %>
+  </ul>
 
-<%= link_to "Create a list", new_list_path, class: "btn btn-primary"%>
+  <%= link_to "Create a list", new_list_path, class: "btn btn-primary"%>
+<div/>
